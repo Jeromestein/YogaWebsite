@@ -1,3 +1,9 @@
+/*
+The Sino Yoga website, primarily targeting overseas users, 
+offers both Chinese and English versions. It includes features such as an online store, 
+an introduction to the founder, and links to social media accounts.
+*/
+
 import Image from "next/image";
 import Link from 'next/link';
 import Layout from './components/Layout';

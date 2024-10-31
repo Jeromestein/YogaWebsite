@@ -6,31 +6,52 @@ import { useState } from 'react';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState('en');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'zh' : 'en');
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* 导航栏 */}
-      <header className="flex justify-between items-center p-4">
+      <header className="flex justify-between items-center p-4 relative">
         <div className="text-2xl font-bold">
           <Link href="/">五⾏经络瑜伽</Link>
         </div>
-        <nav className="hidden md:block">
-          <ul className="flex space-x-4">
-            <li><Link href="/inner-page">{language === 'en' ? 'HOME' : '首页'}</Link></li>
-            <li><Link href="/inner-page">{language === 'en' ? 'PRODUCT' : '产品'}</Link></li>
-            <li><Link href="/inner-page">{language === 'en' ? 'STORE' : '商店'}</Link></li>
-            <li><Link href="/inner-page">{language === 'en' ? 'ABOUT US' : '关于我们'}</Link></li>
+        <nav className={`
+          md:block
+          ${isMenuOpen ? 'block' : 'hidden'}
+          ${isMenuOpen ? 'absolute top-full left-0 right-0 bg-white shadow-lg z-50' : ''}
+          md:relative md:shadow-none md:top-auto md:left-auto md:right-auto
+        `}>
+          <ul className={`
+            md:flex md:space-x-4
+            ${isMenuOpen ? 'flex flex-col space-y-2 p-4' : ''}
+          `}>
+            <li className="md:p-0 p-2 hover:bg-gray-100">
+              <Link href="/inner-page">{language === 'en' ? 'HOME' : '首页'}</Link>
+            </li>
+            <li className="md:p-0 p-2 hover:bg-gray-100">
+              <Link href="/inner-page">{language === 'en' ? 'PRODUCT' : '产品'}</Link>
+            </li>
+            <li className="md:p-0 p-2 hover:bg-gray-100">
+              <Link href="/inner-page">{language === 'en' ? 'STORE' : '商店'}</Link>
+            </li>
+            <li className="md:p-0 p-2 hover:bg-gray-100">
+              <Link href="/inner-page">{language === 'en' ? 'ABOUT US' : '关于我们'}</Link>
+            </li>
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
           <button onClick={toggleLanguage} className="p-2">
             <FaGlobe className="text-black" size={20} />
           </button>
-          <div className="space-y-1 cursor-pointer md:hidden">
+          <div className="space-y-1 cursor-pointer md:hidden" onClick={toggleMenu}>
             <div className="w-6 h-0.5 bg-black"></div>
             <div className="w-6 h-0.5 bg-black"></div>
             <div className="w-6 h-0.5 bg-black"></div>
