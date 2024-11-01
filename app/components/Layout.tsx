@@ -27,31 +27,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           */}
           <Link href="/">五行经络瑜伽</Link>
         </div>
-        <nav className={`
-          md:block
-          ${isMenuOpen ? 'block' : 'hidden'}
-          ${isMenuOpen ? 'absolute top-full left-0 right-0 bg-white shadow-lg z-50' : ''}
-          md:relative md:shadow-none md:top-auto md:left-auto md:right-auto
-        `}>
-          <ul className={`
-            md:flex md:space-x-4
-            ${isMenuOpen ? 'flex flex-col space-y-2 p-4' : ''}
-          `}>
-            <li className="md:p-0 p-2 hover:bg-gray-100">
-              <Link href="/inner-page">{language === 'en' ? 'HOME' : '首页'}</Link>
-            </li>
-            <li className="md:p-0 p-2 hover:bg-gray-100">
-              <Link href="/inner-page">{language === 'en' ? 'PRODUCT' : '产品'}</Link>
-            </li>
-            <li className="md:p-0 p-2 hover:bg-gray-100">
-              <Link href="/inner-page">{language === 'en' ? 'STORE' : '商店'}</Link>
-            </li>
-            <li className="md:p-0 p-2 hover:bg-gray-100">
-              <Link href="/inner-page">{language === 'en' ? 'ABOUT US' : '关于我们'}</Link>
-            </li>
-          </ul>
-        </nav>
         <div className="flex items-center space-x-4">
+          <nav className={`
+            md:block
+            ${isMenuOpen ? 'block' : 'hidden'}
+            ${isMenuOpen ? 'absolute top-full right-0 bg-white shadow-lg z-50' : ''}
+            md:relative md:shadow-none md:top-auto md:right-auto
+          `}>
+            <ul className={`
+              md:flex md:space-x-4
+              ${isMenuOpen ? 'flex flex-col space-y-2 p-4' : ''}
+            `}>
+              <li className="md:p-0 p-2 hover:bg-gray-100">
+                <Link href="/inner-page">{language === 'en' ? 'ABOUT US' : '关于我们'}</Link>
+              </li>
+            </ul>
+          </nav>
           <button onClick={toggleLanguage} className="p-2">
             <FaGlobe className="text-black" size={20} />
           </button>
