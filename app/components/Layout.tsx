@@ -50,9 +50,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </li>
             </ul>
           </nav>
-          <button
+          <div
             onClick={toggleLanguageMenu}
-            className="p-2 relative"
+            className="p-2 relative cursor-pointer"
           >
             <FaGlobe className="text-black" size={20} />
             <div className={`${isLanguageMenuOpen ? 'block' : 'hidden'} absolute right-0 mt-2 w-24 bg-white border rounded-md shadow-lg`}>
@@ -75,7 +75,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 中文
               </button>
             </div>
-          </button>
+          </div>
           <div className="space-y-1 cursor-pointer md:hidden" onClick={toggleMenu}>
             <div className="w-6 h-0.5 bg-black"></div>
             <div className="w-6 h-0.5 bg-black"></div>
