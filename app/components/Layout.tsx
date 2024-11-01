@@ -1,6 +1,6 @@
 "use client";
 
-import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp, FaGlobe } from 'react-icons/fa';
+import { FaGlobe, FaTiktok, FaYoutube, FaWeixin } from 'react-icons/fa';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -71,18 +71,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* 页脚 */}
       <footer className="flex flex-col md:flex-row justify-between items-center p-4 space-y-12 md:space-y-0">
         <div className="flex space-x-4 order-1">
+          {/* <a href="https://www.tiktok.com/@youraccount" target="_blank" rel="noopener noreferrer"> */}
           <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-            <FaFacebookF className="text-white" size={16} />
+            <FaTiktok className="text-white" size={16} />
           </div>
+          {/* </a> */}
+          {/* <a href="https://example.com/wechat" target="_blank" rel="noopener noreferrer"> */}
           <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-            <FaInstagram className="text-white" size={16} />
+            <FaWeixin className="text-white" size={16} />
           </div>
+          {/* </a> */}
+          {/* <a href="https://youtube.com/c/yourchannel" target="_blank" rel="noopener noreferrer"> */}
           <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-            <FaTwitter className="text-white" size={16} />
+            <FaYoutube className="text-white" size={16} />
           </div>
-          <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-            <FaWhatsapp className="text-white" size={16} />
-          </div>
+          {/* </a> */}
         </div>
         <div className="order-2">
           &copy; {new Date().getFullYear()} {language === 'en' ? 'Your Company Name' : '您的公司名称'}.
