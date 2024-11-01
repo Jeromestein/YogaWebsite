@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "五⾏经络瑜伽",
-  description: "五⾏经络瑜伽",
+  title: "五行经络瑜伽",
+  description: "五行经络瑜伽",
 };
 
 export default function RootLayout({
