@@ -21,7 +21,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* 导航栏 */}
       <header className="flex justify-between items-center p-4 relative">
         <div className="text-2xl font-bold">
-          <Link href="/">五行经络瑜伽</Link>
+          /**
+          - Simplified/Traditional: 行
+          - Special Unicode variant: ⾏
+          */
+          <Link href="/">五⾏经络瑜伽</Link>
         </div>
         <nav className={`
           md:block
