@@ -7,6 +7,7 @@ import { useState } from 'react';
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState('en');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
 
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'zh' : 'en');
@@ -14,6 +15,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setIsLanguageMenuOpen(false);
+  };
+
+  const toggleLanguageMenu = () => {
+    setIsLanguageMenuOpen(!isLanguageMenuOpen);
+    setIsMenuOpen(false);
   };
 
   return (
@@ -43,8 +50,31 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </li>
             </ul>
           </nav>
-          <button onClick={toggleLanguage} className="p-2">
+          <button
+            onClick={toggleLanguageMenu}
+            className="p-2 relative"
+          >
             <FaGlobe className="text-black" size={20} />
+            <div className={`${isLanguageMenuOpen ? 'block' : 'hidden'} absolute right-0 mt-2 w-24 bg-white border rounded-md shadow-lg`}>
+              <button
+                onClick={() => {
+                  setLanguage('en');
+                  setIsLanguageMenuOpen(false);
+                }}
+                className={`w-full text-left px-4 py-2 hover:bg-gray-100 ${language === 'en' ? 'bg-gray-100' : ''}`}
+              >
+                English
+              </button>
+              <button
+                onClick={() => {
+                  setLanguage('zh');
+                  setIsLanguageMenuOpen(false);
+                }}
+                className={`w-full text-left px-4 py-2 hover:bg-gray-100 ${language === 'zh' ? 'bg-gray-100' : ''}`}
+              >
+                中文
+              </button>
+            </div>
           </button>
           <div className="space-y-1 cursor-pointer md:hidden" onClick={toggleMenu}>
             <div className="w-6 h-0.5 bg-black"></div>
