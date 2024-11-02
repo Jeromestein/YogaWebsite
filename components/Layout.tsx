@@ -1,3 +1,16 @@
+/**
+ * Layout Component
+ * 
+ * A responsive website layout wrapper that provides:
+ * - Bilingual support (English/Chinese) with language switcher
+ * - Responsive navigation with hamburger menu for mobile
+ * - Header with site title and navigation
+ * - Main content area
+ * - Footer with social media icons and copyright
+ * 
+ * Used as the main layout wrapper for all pages in the application.
+ */
+
 "use client";
 
 import { FaGlobe, FaTiktok, FaYoutube, FaWeixin } from 'react-icons/fa';
