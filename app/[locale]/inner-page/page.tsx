@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Layout from '@/components/Layout';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 
-export default function InnerPage() {
+export default function About() {
   return (
     <Layout>
       <div className="w-full flex flex-col items-center justify-center">

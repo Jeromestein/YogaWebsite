@@ -59,7 +59,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               ${isMenuOpen ? 'flex flex-col space-y-2 p-4' : ''}
             `}>
               <li className="md:p-0 p-2 hover:bg-gray-100">
-                <Link href="/inner-page">{language === 'en' ? 'ABOUT US' : '关于我们'}</Link>
+                <Link href="/about-us">{language === 'en' ? 'ABOUT US' : '关于我们'}</Link>
               </li>
             </ul>
           </nav>

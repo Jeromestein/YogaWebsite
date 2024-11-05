@@ -42,7 +42,9 @@ export default function Home() {
       {/* 左侧：介绍文字和按钮 */}
       <div className="w-full md:w-1/3 text-center md:text-left order-3 md:order-1">
         <p className="mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices fi.....
+          传播中国式瑜伽<br />
+          以东方智慧与传统医学诠释瑜伽<br />
+          五行经络瑜伽改善人类生活方式
         </p>
         <Link href="/inner-page">
           <RainbowButton>Read More</RainbowButton>
