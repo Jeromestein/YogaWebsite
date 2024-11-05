@@ -6,9 +6,9 @@ an introduction to the founder, and links to social media accounts.
 
 import Image from "next/image";
 import Link from 'next/link';
-import Layout from '../components/Layout';
-import { RainbowButton } from '../components/ui/rainbow-button';
-import Ripple from '../components/ui/ripple';
+import Layout from '@/components/Layout';
+import { RainbowButton } from '@/components/ui/rainbow-button';
+import Ripple from '@/components/ui/ripple';
 
 export default function Home() {
   return (

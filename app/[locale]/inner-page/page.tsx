@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { RainbowButton } from '../../components/ui/rainbow-button';
+import Layout from '@/components/Layout';
+import { RainbowButton } from '@/components/ui/rainbow-button';
 
 export default function InnerPage() {
   return (
