@@ -4,14 +4,11 @@
  */
 
 import Image from "next/image";
-import Link from 'next/link';
-import Layout from '@/app/components/Layout';
-import { RainbowButton } from '@/app/components/ui/rainbow-button';
 import Ripple from '@/app/components/ui/ripple';
 
 export default function AboutUs() {
   return (
-    <Layout>
+    <>
       {/* Main container */}
       <div className="w-full flex flex-col items-center">
         {/* Title section - Reduced top margin, increased bottom margin */}
@@ -55,6 +52,6 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
