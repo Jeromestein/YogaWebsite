@@ -6,9 +6,9 @@
 
 import Image from "next/image";
 import Link from 'next/link';
-import Layout from '@/components/Layout';
-import { RainbowButton } from '@/components/ui/rainbow-button';
-import Ripple from '@/components/ui/ripple';
+import Layout from '@/app/components/Layout';
+import { RainbowButton } from '@/app/components/ui/rainbow-button';
+import Ripple from '@/app/components/ui/ripple';
 
 export default function Home() {
   return (

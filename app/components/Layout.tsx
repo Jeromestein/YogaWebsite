@@ -38,7 +38,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* 导航栏 */}
+      {/* Header */}
       <header className="flex justify-between items-center p-4 relative">
         <div className="text-2xl font-bold">
           {/*
