@@ -1,8 +1,8 @@
 /*
-The Sino Yoga website, primarily targeting overseas users, 
-offers both Chinese and English versions. It includes features such as an online store, 
-an introduction to the founder, and links to social media accounts.
-*/
+ * The Sino Yoga website, primarily targeting overseas users, 
+ * offers both Chinese and English versions. It includes features such as an online store, 
+ * an introduction to the founder, and links to social media accounts.
+ */
 
 import Image from "next/image";
 import Link from 'next/link';
@@ -13,7 +13,7 @@ import Ripple from '@/components/ui/ripple';
 export default function Home() {
   return (
     <Layout>
-      {/* 中间：人物和呼吸效果的黄色圆形 */}
+      {/* Center: Profile photo with yellow breathing effect circle */}
       <div className="w-full md:w-1/3 relative flex justify-center items-center mb-8 md:mb-0 order-1 md:order-2">
         <div className="w-64 h-64 md:w-80 md:h-80 rounded-full absolute overflow-hidden">
           <Ripple
@@ -32,14 +32,14 @@ export default function Home() {
         />
       </div>
 
-      {/* 右侧：less is more 文字 */}
+      {/* Right side: "less is more" text */}
       <div className="w-full md:w-1/3 flex items-center justify-center md:justify-end mb-8 md:mb-0 order-2 md:order-3">
         <h1 className="text-4xl md:text-6xl font-bold text-center md:text-right">
           less is<br />more.
         </h1>
       </div>
 
-      {/* 左侧：介绍文字和按钮 */}
+      {/* Left side: Introduction text and button */}
       <div className="w-full md:w-1/3 text-center md:text-left order-3 md:order-1">
         <p className="mb-4">
           传播中国式瑜伽<br />

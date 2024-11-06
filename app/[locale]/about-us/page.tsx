@@ -1,7 +1,7 @@
 /*
-The About Us Page
-Introducing the founder, Qi Yang
-*/
+ * The About Us Page
+ * Introducing the founder, Qi Yang
+ */
 
 import Image from "next/image";
 import Link from 'next/link';
@@ -9,20 +9,20 @@ import Layout from '@/components/Layout';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import Ripple from '@/components/ui/ripple';
 
-export default function About() {
+export default function AboutUs() {
   return (
     <Layout>
-      {/* 整体内容容器 */}
+      {/* Main container */}
       <div className="w-full flex flex-col items-center">
-        {/* 标题部分 - 减小上边距，增加下边距 */}
+        {/* Title section - Reduced top margin, increased bottom margin */}
         <div className="w-full text-center mb-20 mt-4">
           <h1 className="text-3xl md:text-4xl font-bold">杨淇</h1>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mt-4"></div>
         </div>
 
-        {/* 主内容容器 */}
+        {/* Main content container */}
         <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8 px-4">
-          {/* 左侧：介绍文字 */}
+          {/* Left side: Introduction text */}
           <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
             <p className="mb-4">
               · 五⾏经络瑜伽创始⼈<br />
@@ -35,7 +35,7 @@ export default function About() {
             </p>
           </div>
 
-          {/* 右侧：人物和呼吸效果的黄色圆形 */}
+          {/* Right side: Profile photo with yellow breathing effect circle */}
           <div className="w-full md:w-1/2 relative flex justify-center items-center mb-8 md:mb-0 order-1 md:order-2">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full absolute overflow-hidden">
               <Ripple
