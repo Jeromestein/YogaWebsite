@@ -16,44 +16,25 @@ import { useState } from 'react';
 
 export default function Header() {
   const [language, setLanguage] = useState('en');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
 
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'zh' : 'en');
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    setIsLanguageMenuOpen(false);
-  };
-
   const toggleLanguageMenu = () => {
     setIsLanguageMenuOpen(!isLanguageMenuOpen);
-    setIsMenuOpen(false);
   };
 
   return (
     <header className="flex justify-between items-center p-4 relative">
       <div className="text-2xl font-bold">
-        {/*
-        - Simplified/Traditional: 行
-        - Special Unicode variant: ⾏
-        */}
         <Link href="/">五行经络瑜伽</Link>
       </div>
       <div className="flex items-center space-x-4">
-        <nav className={`
-          md:block
-          ${isMenuOpen ? 'block' : 'hidden'}
-          ${isMenuOpen ? 'absolute top-full right-0 bg-white shadow-lg z-50' : ''}
-          md:relative md:shadow-none md:top-auto md:right-auto
-        `}>
-          <ul className={`
-            md:flex md:space-x-4
-            ${isMenuOpen ? 'flex flex-col space-y-2 p-4' : ''}
-          `}>
-            <li className="md:p-0 p-2 hover:bg-gray-100">
+        <nav className="block">
+          <ul className="flex space-x-4">
+            <li className="p-0 hover:bg-gray-100">
               <Link href="/about-us">{language === 'en' ? 'ABOUT US' : '关于我们'}</Link>
             </li>
           </ul>
@@ -83,11 +64,6 @@ export default function Header() {
               中文
             </button>
           </div>
-        </div>
-        <div className="space-y-1 cursor-pointer md:hidden" onClick={toggleMenu}>
-          <div className="w-6 h-0.5 bg-black"></div>
-          <div className="w-6 h-0.5 bg-black"></div>
-          <div className="w-6 h-0.5 bg-black"></div>
         </div>
       </div>
     </header>
