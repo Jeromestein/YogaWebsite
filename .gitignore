@@ -7,6 +7,10 @@
 # Testing
 /coverage
 
+# Editor
+.vscode
+.editorconfig
+
 # Next.js
 /.next/
 /out/

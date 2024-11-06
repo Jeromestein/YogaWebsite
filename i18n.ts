@@ -7,11 +7,11 @@ import { locales, type Locale } from "@/i18n.config";
  * @returns The request config for the current locale
  */
 export default getRequestConfig(async ({ locale }) => {
-    if (!locales.includes(locale as Locale)) {
-        return notFound();
-    }
-    return {
-        messages: (await import(`./locales/${locale}.json`))
-            .default,
-    };
+  if (!locales.includes(locale as Locale)) {
+    return notFound();
+  }
+  return {
+    messages: (await import(`./locales/${locale}.json`))
+      .default,
+  };
 });
