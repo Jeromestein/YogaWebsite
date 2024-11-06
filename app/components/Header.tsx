@@ -10,8 +10,7 @@
  */
 
 "use client";
-
-import { FaGlobe, FaTiktok, FaYoutube, FaWeixin } from 'react-icons/fa';
+import { FaGlobe } from 'react-icons/fa';
 import Link from 'next/link';
 import { useState } from 'react';
 

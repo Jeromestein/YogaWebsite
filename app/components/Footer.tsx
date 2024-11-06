@@ -9,14 +9,11 @@
  * Used as the main footer for all pages in the application.
  */
 
-"use client";
-
-import { FaGlobe, FaTiktok, FaYoutube, FaWeixin } from 'react-icons/fa';
-import Link from 'next/link';
-import { useState } from 'react';
+import { FaTiktok, FaYoutube, FaWeixin } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
-  const [language, setLanguage] = useState('en');
+  const t = useTranslations('Footer');
 
   return (
     <footer className="flex flex-col md:flex-row justify-between items-center p-4 space-y-12 md:space-y-0">
@@ -38,8 +35,11 @@ export default function Footer() {
         {/* </a> */}
       </div>
       <div className="order-2">
-        &copy; {new Date().getFullYear()} {language === 'en' ? 'Your Company Name' : '您的公司名称'}.
-        {language === 'en' ? 'All rights reserved.' : '版权所有。'}
+        &copy; {new Date().getFullYear()}
+        {` `}
+        {t('companyName')}.
+        {` `}
+        {t('copyright')}.
       </div>
     </footer>
   );

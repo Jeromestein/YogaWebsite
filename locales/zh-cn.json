@@ -1,0 +1,33 @@
+{
+  "Header": {
+    "appTitle": "Next.js 天气",
+    "navLinks": {
+      "aboutUs": "关于我们"
+    }
+  },
+  "Footer": {
+    "socialMedia": {
+      "tiktok": "抖音",
+      "youtube": "油管",
+      "weixin": "微信"
+    },
+    "companyName": "您的公司名称",
+    "copyright": "版权所有"
+  },
+  "Layout": {
+    "metaData": {
+      "title": "五行经络瑜伽",
+      "description": "五行经络瑜伽官方网站"
+    }
+  },
+  "Home": {
+    "title": "今日天气",
+    "userGreeting": "👋 你好，{name}！",
+    "sunny": "晴天"
+  },
+  "AboutUs": {
+    "title": "关于",
+    "description": "这是一个使用 <linkToNext>Next.js</linkToNext> 构建的简约天气应用。",
+    "liveDuration": "我们已经运行了 {duration, number, ::precision-integer} 秒。"
+  }
+}
