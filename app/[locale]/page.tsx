@@ -49,7 +49,7 @@ export default function Home({
           />
         </div>
         <Image
-          src="/person1.png"
+          src="/qy-1.1.png"
           alt="Profile"
           width={240}
           height={240}
