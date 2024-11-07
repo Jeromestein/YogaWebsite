@@ -21,9 +21,12 @@
     }
   },
   "Home": {
-    "title": "Today's weather",
-    "userGreeting": "👋 Welcome, {name}!",
-    "sunny": "Sunny"
+    "introduction-1": "Embrace Eastern Wisdom and Traditional Medicine",
+    "introduction-2": "Promote Chinese Yoga",
+    "introduction-3": "Optimize Lifestyle",
+    "moreButton": "Explore More",
+    "slogan-1": "less is",
+    "slogan-2": "more."
   },
   "AboutUs": {
     "title": "About",

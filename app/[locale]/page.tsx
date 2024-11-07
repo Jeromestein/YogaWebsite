@@ -8,18 +8,28 @@ import Image from "next/image";
 import Link from 'next/link';
 import { RainbowButton } from '@/app/components/ui/rainbow-button';
 import Ripple from '@/app/components/ui/ripple';
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("Home");
   return (
     <>
       <div className="w-full md:w-1/3 text-center md:text-left order-3 md:order-1">
+        {/**
+           * Introduction section with bullet points.
+           * Each introduction line is prefixed with a dot and uses grid layout
+           * to ensure proper text wrapping and alignment with the bullet point.
+           */}
         <p className="mb-4">
-          传播中国式瑜伽<br />
-          以东方智慧与传统医学诠释瑜伽<br />
-          五行经络瑜伽改善人类生活方式
+          {['introduction-1', 'introduction-2', 'introduction-3'].map((key) => (
+            <div key={key} className="grid grid-cols-[12px_1fr] gap-1 mb-2">
+              <span>·</span>
+              <span>{t(key)}</span>
+            </div>
+          ))}
         </p>
         <Link href="/inner-page">
-          <RainbowButton>Read More</RainbowButton>
+          <RainbowButton>{t("moreButton")}</RainbowButton>
         </Link>
       </div>
       {/* Right side: Profile photo with yellow breathing effect circle */}
@@ -43,7 +53,7 @@ export default function Home() {
 
       <div className="w-full md:w-1/3 flex items-center justify-center md:justify-end mb-8 md:mb-0 order-2 md:order-3">
         <h1 className="text-4xl md:text-6xl font-bold text-center md:text-right">
-          less is<br />more.
+          {t("slogan-1")}<br />{t("slogan-2")}
         </h1>
       </div>
     </>

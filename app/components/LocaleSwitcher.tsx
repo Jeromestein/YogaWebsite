@@ -36,7 +36,7 @@ export default function LocaleSwitcher({
       <select
         value={locale}
         onChange={changeLocale}
-        className="rounded-sm bg-sky-200 px-2 py-1 text-sky-950"
+        className="p-0 hover:bg-gray-100"
       >
         {locales.map((loc) => (
           <option key={loc} value={loc}>

@@ -21,9 +21,12 @@
     }
   },
   "Home": {
-    "title": "今日天气",
-    "userGreeting": "👋 你好，{name}！",
-    "sunny": "晴天"
+    "introduction-1": "悦纳东方智慧与传统医学",
+    "introduction-2": "传扬中式瑜伽",
+    "introduction-3": "优化生活方式",
+    "moreButton": "探索更多",
+    "slogan-1": "少",
+    "slogan-2": "即是多"
   },
   "AboutUs": {
     "title": "关于",
