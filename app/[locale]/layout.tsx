@@ -15,6 +15,8 @@ import localFont from "next/font/local";
 import "@/app/globals.css";
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
+import { type Locale, locales } from "@/i18n.config";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 const geistSans = localFont({
   // use relative path, not @
@@ -29,6 +31,10 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export const metadata: Metadata = {
   title: "五行经络瑜伽",
   description: "五行经络瑜伽",
@@ -36,9 +42,12 @@ export const metadata: Metadata = {
 
 export default function LocaleLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: Locale };
 }>) {
+  unstable_setRequestLocale(locale);
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>

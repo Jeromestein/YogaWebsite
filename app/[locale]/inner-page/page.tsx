@@ -5,8 +5,12 @@
 import Image from "next/image";
 import Ripple from '@/app/components/ui/ripple';
 import { useTranslations } from 'next-intl';
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function InnerPage() {
+export default function InnerPage({
+  params: { locale },
+}: Readonly<{ params: { locale: string } }>) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations('InnerPage');
   return (
     <>
