@@ -1,18 +1,20 @@
 /*
  * The Inner Page
- * Introducing Sino Yoga and related courses
+ * Introducing SinoYoga and related courses
  */
 import Image from "next/image";
 import Ripple from '@/app/components/ui/ripple';
+import { useTranslations } from 'next-intl';
 
 export default function InnerPage() {
+  const t = useTranslations('InnerPage');
   return (
     <>
       {/* Main container */}
       <div className="w-full flex flex-col items-center">
         {/* Title section - Reduced top margin, increased bottom margin */}
         <div className="w-full text-center mb-20 mt-4">
-          <h1 className="text-3xl md:text-4xl font-bold">五行经络瑜伽全科系</h1>
+          <h1 className="text-3xl md:text-4xl font-bold">{t('title')}</h1>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mt-4"></div>
         </div>
 
@@ -20,18 +22,19 @@ export default function InnerPage() {
         <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8 px-4">
           {/* Left side: Introduction text */}
           <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
-            <p className="mb-4">
-              五行经络瑜伽:正位瑜伽、五行功、气道•智慧呼吸、情志疗愈和氧气厨房五大板块<br />
+            <div className="mb-4">
+              {t('subtitle')}
               <br />
-              · 40多种呼吸法<br />
-              · 150多个木火土金水的序列练习<br />
-              · 五行功36式 ——适合全家人练习<br />
-              · 24节气养生与食疗<br />
-              · 朴素智慧、唱诵冥想<br />
+              {['description-1', 'description-2', 'description-3', 'description-4', 'description-5'].map((key) => (
+                <div key={key} className="grid grid-cols-[12px_1fr] gap-1 mb-2">
+                  <span>·</span>
+                  <span>{t(key)}</span>
+                </div>
+              ))}
               ......<br />
               <br />
-              适合初级练习者和瑜伽老师用于私教和小班课教学。
-            </p>
+              {t('summary')}
+            </div>
           </div>
 
           {/* Right side: Profile photo with yellow breathing effect circle */}

@@ -5,8 +5,10 @@
 
 import Image from "next/image";
 import Ripple from '@/app/components/ui/ripple';
+import { useTranslations } from 'next-intl';
 
 export default function AboutUs() {
+  const t = useTranslations('AboutUs');
   return (
     <>
       {/* Main container */}
@@ -21,15 +23,14 @@ export default function AboutUs() {
         <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8 px-4">
           {/* Left side: Introduction text */}
           <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
-            <p className="mb-4">
-              · 五⾏经络瑜伽创始⼈<br />
-              · 智慧呼吸 ——【⽓道】创始⼈<br />
-              · 氧⽓悦汁⾃然疗法开创者<br />
-              · 24年瑜伽教学资深经验<br />
-              · 17年纯植物饮⻝实践经验<br />
-              · 百万学员之瑜伽导师<br />
-              · 誉为"中国式瑜伽第⼀⼈"
-            </p>
+            <div className="mb-4">
+              {['description-1', 'description-2', 'description-3', 'description-4', 'description-5', 'description-6', 'description-7'].map((key) => (
+                <div key={key} className="grid grid-cols-[12px_1fr] gap-1 mb-2">
+                  <span>·</span>
+                  <span>{t(key)}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Right side: Profile photo with yellow breathing effect circle */}

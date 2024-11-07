@@ -1,5 +1,5 @@
 /*
- * The Sino Yoga website, primarily targeting overseas users, 
+ * The SinoYoga website, primarily targeting overseas users, 
  * offers both Chinese and English versions. It includes features such as an online store, 
  * an introduction to the founder, and links to social media accounts.
  */
@@ -20,18 +20,19 @@ export default function Home() {
            * Each introduction line is prefixed with a dot and uses grid layout
            * to ensure proper text wrapping and alignment with the bullet point.
            */}
-        <p className="mb-4">
+        <div className="mb-4">
           {['introduction-1', 'introduction-2', 'introduction-3'].map((key) => (
             <div key={key} className="grid grid-cols-[12px_1fr] gap-1 mb-2">
               <span>·</span>
               <span>{t(key)}</span>
             </div>
           ))}
-        </p>
+        </div>
         <Link href="/inner-page">
           <RainbowButton>{t("moreButton")}</RainbowButton>
         </Link>
       </div>
+
       {/* Right side: Profile photo with yellow breathing effect circle */}
       <div className="w-full md:w-1/3 relative flex justify-center items-center mb-8 md:mb-0 order-1 md:order-2">
         <div className="w-64 h-64 md:w-80 md:h-80 rounded-full absolute overflow-hidden">
