@@ -10,7 +10,6 @@
  * 
  * Used as the main layout wrapper for all pages in the application.
  */
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@/app/globals.css";
 import Header from '@/app/components/Header';
@@ -34,11 +33,6 @@ const geistMono = localFont({
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
-
-// export const metadata: Metadata = {
-//   title: "五行经络瑜伽",
-//   description: "五行经络瑜伽",
-// };
 
 /*
  * We pull in the current locale

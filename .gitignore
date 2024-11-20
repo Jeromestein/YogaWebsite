@@ -50,6 +50,10 @@ FAQ.md
 FAQ.pdf
 YangQi.pdf
 Yangqi.md
+*.m4a
+*.mp3
+*.mp4
+*.wav
 
 # Optional: Cache directories
 .npm
