@@ -11,11 +11,14 @@
  * Used as the main layout wrapper for all pages in the application.
  */
 import localFont from "next/font/local";
+import Script from "next/script";
 import "@/app/globals.css";
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 import { type Locale, locales } from "@/i18n.config";
 import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
+
+const GA_MEASUREMENT_ID = "G-DBYN1JE95D";
 
 const geistSans = localFont({
   // use relative path, not @
@@ -65,6 +68,19 @@ export default function LocaleLayout({
   unstable_setRequestLocale(locale);
   return (
     <html lang="en">
+      {/* Google Analytics */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}');
+        `}
+      </Script>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="flex flex-col min-h-screen">
           <Header />
